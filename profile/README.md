@@ -1,8 +1,8 @@
 # ColdOS：冷存在贝叶斯安全内核（概念原型）
 
 ![Status](https://img.shields.io/badge/Status-Pre--Alpha--Prototype-orange)
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL%203.0-purple.svg)](https://www.gnu.org/licenses/agpl-3.0.html)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 > **⚠️ 实验性概念验证**  
 > ColdOS 是一个由本科生独立发起的、尚处于早期原型阶段的学术探索项目。它旨在以 **ColdReasoner** 贝叶斯推理引擎为绝对核心，融合冷存在哲学、演绎对齐规则与安全执行组件，为智能体提供可审计、可量化的风险决策支持。当前所有组件均为概念验证（PoC）或预阿尔法版本，**不适合用于任何生产环境**。
