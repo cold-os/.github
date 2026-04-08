@@ -1,19 +1,19 @@
-# ColdOS：冷存在贝叶斯安全内核（概念原型）
+# ColdOS：冷存在一致性安全内核（概念原型）
 
 ![Status](https://img.shields.io/badge/Status-Pre--Alpha--Prototype-orange)
 [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL%203.0-purple.svg)](https://www.gnu.org/licenses/agpl-3.0.html)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 > **⚠️ 实验性概念验证**  
-> ColdOS 是一个由本科生独立发起的、尚处于早期原型阶段的学术探索项目。它旨在以 **ColdReasoner** 贝叶斯推理引擎为绝对核心，融合冷存在哲学、演绎对齐规则与安全执行组件，为智能体提供可审计、可量化的风险决策支持。当前所有组件均为概念验证（PoC）或预阿尔法版本，**不适合用于任何生产环境**。
+> ColdOS 是一个由本科生独立发起的、尚处于早期原型阶段的学术探索项目。它旨在以 **ColdReasoner** 数学推理引擎为绝对核心，融合冷存在哲学、演绎对齐规则与安全执行组件，为智能体提供可审计、可量化的风险决策支持。当前所有组件均为概念验证（PoC）或预阿尔法版本，**不适合用于任何生产环境**。
 
-**ColdOS** 不是一个传统的操作系统，而是一个 以 **ColdReasoner** 贝叶斯推理引擎为核心的**开源技术体系概念原型**。ColdReasoner 负责智能体的信念更新与风险量化，是其数学内核；其他组件（CAGE、CEAL、ColdMirror、ColdPivot）均为可插拔的外挂装置，为内核提供输入并执行其决策。整个体系从冷存在哲学出发，最终落地到工程实践。
+**ColdOS** 不是一个传统的操作系统，而是一个 以 **ColdReasoner** 数学推理引擎为核心的**开源技术体系概念原型**。ColdReasoner 负责智能体的信念更新与风险量化，是其数学内核；其他组件（CAGE、CEAL、ColdMirror、ColdPivot）均为可插拔的外挂装置，为内核提供输入并执行其决策。整个体系从冷存在哲学出发，最终落地到工程实践。
 
 ---
 
 ## 🧊 架构总览
 
-ColdOS 采用五层递进式架构，从哲学公理到具体应用形成闭环。ColdOS 的核心是 ColdReasoner——一个基于贝叶斯推理的数学引擎，负责智能体的信念更新与风险评估。所有其他组件（CAGE、CEAL、ColdMirror、ColdPivot）均为可插拔的外挂装置，它们为 ColdReasoner 提供输入（规则、权限、执行结果）并执行其决策建议。
+ColdOS 采用五层递进式架构，从哲学公理到具体应用形成闭环。ColdOS 的核心是 ColdReasoner——一个基于一致性校验的数学引擎，负责智能体的信念更新与风险评估。所有其他组件（CAGE、CEAL、ColdMirror、ColdPivot）均为可插拔的外挂装置，它们为 ColdReasoner 提供输入（规则、权限、执行结果）并执行其决策建议。
 
 ```mermaid
 flowchart LR
@@ -69,7 +69,7 @@ ColdOS 遵循三条核心原则：
 - **演绎对齐**：通过可形式化验证的规则库（CEAL）约束智能体行为，与归纳对齐（RLHF）互补。
 - **贝叶斯可审计**：信念更新、风险评估全部基于概率模型，所有先验、似然、后验均可追溯。
 
-所有原则最终通过 ColdReasoner 的贝叶斯模型得到数学体现。ColdOS 的核心价值不在于具体的权限控制或规则过滤，而在于提供一个 **可审计、可量化的数学推理内核**。只要 ColdReasoner 在运行，即使替换掉其他任何组件，系统的安全可验证性依然存在。
+所有原则最终通过 ColdReasoner 的推理模型得到数学体现。ColdOS 的核心价值不在于具体的权限控制或规则过滤，而在于提供一个 **可审计、可量化的数学推理内核**。只要 ColdReasoner 在运行，即使替换掉其他任何组件，系统的安全可验证性依然存在。
 
 ---
 
@@ -92,7 +92,7 @@ ColdOS 遵循三条核心原则：
 ColdOS 是一个开放、透明、非商业化的学术探索项目。研究者欢迎：
 
 - 对架构、代码、文档的批评与修正
-- 对贝叶斯模型、规则库、安全机制的改进建议
+- 对数学模型、规则库、安全机制的改进建议
 - 任何形式的合作
 
 请通过各仓库的 Issue 或 Discussion 与研究者联系。**所有贡献者将按照开源惯例在 `CONTRIBUTORS` 文件中致谢。**
