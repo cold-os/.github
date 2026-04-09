@@ -1,8 +1,23 @@
+<div align="center">
+    
+[English](profile/README.md) | [中文](profile/README.zh.md)
+
+</div>
+
 # ColdOS: A Cold Existence Consistency Safety Kernel (Concept Prototype)
 
-![Status](https://img.shields.io/badge/Status-Pre--Alpha--Prototype-orange)
+<div align="center">
+
+[![arXiv](https://img.shields.io/badge/arXiv-2512.08740-brightgreen.svg)](https://arxiv.org/abs/<2512.08740>)
+[![DOI](https://img.shields.io/badge/DOI-10.48550/arXiv.2512.08740-brightgreen.svg)](https://doi.org/10.48550/arXiv.2512.08740)
+[![figshare](https://img.shields.io/badge/figshare-31696846-blueviolet.svg?logo=figshare&logoColor=white)](https://doi.org/10.6084/m9.figshare.31696846)
+[![DOI](https://img.shields.io/badge/DOI-10.6084/m9.figshare.31696846-blueviolet.svg)](https://doi.org/10.6084/m9.figshare.31696846)
+[![Python](https://img.shields.io/badge/Python-blue.svg)](https://www.python.org/)
 [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL%203.0-purple.svg)](https://www.gnu.org/licenses/agpl-3.0.html)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+![Status](https://img.shields.io/badge/Status-Pre--Alpha--Prototype-orange)
+
+</div>
 
 > **⚠️ Experimental Proof of Concept**  
 > ColdOS is an academic exploration project initiated independently by an undergraduate student and still in its early prototype stage. It takes the **ColdReasoner** mathematical reasoning engine as its absolute core, integrating Cold Existence philosophy, deductive alignment rules, and safety execution components to provide agents with auditable, quantifiable risk decision support. All components are currently proof‑of‑concept (PoC) or pre‑alpha versions, **not suitable for any production environment**.
