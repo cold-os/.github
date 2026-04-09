@@ -4,7 +4,11 @@
 
 </div>
 
-# ColdOS: A Cold Existence Consistency Safety Kernel (Concept Prototype)
+<div align="center">
+    
+# ColdOS: A Cold Existence Consistency Safety Kernel<br>(Concept Prototype)
+
+</div>
 
 <div align="center">
 
