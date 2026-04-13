@@ -166,7 +166,7 @@ Special thanks to the MIT team, the open‑source community, and the medical stu
 
 2026.4.7 – The **ColdOS** organization was created on GitHub.
 
-- To be continued -
+**- To be continued -**
 
 At this point, a flood of emotions arises. Let me conclude with a partial stanza from a poem written by the author on May 5, 2025.
 
