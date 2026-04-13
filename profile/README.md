@@ -59,7 +59,7 @@ flowchart LR
     哲学根基 --> 安全基础设施 --> 推理与决策核心 --> 执行框架 --> 应用层
 ```
 
-> ColdReasoner is the formal kernel of this agent‑oriented operating system. All other components are pluggable devices that feed into its formal consistency checks. The system’s semantics – belief intervals, action legality, and mapping functions – are defined formally, making the entire OS a **mathematically verifiable runtime environment for agents**.
+> ColdReasoner is the formal kernel of this agent‑oriented operating system. All other components are pluggable devices that feed into its formal consistency checks. If the system’s semantics – belief intervals, action legality, and mapping functions – are defined formally, the entire OS will become a **mathematically verifiable runtime environment for agents**.
 
 ---
 
@@ -90,7 +90,7 @@ ColdOS follows three core principles:
 
 All principles are ultimately reflected mathematically through ColdReasoner’s reasoning model. The core value of ColdOS is not in specific access control or rule filtering, but in providing an **auditable, quantifiable mathematical reasoning kernel**. As long as ColdReasoner is running, the verifiable safety of the system persists even if any other component is replaced.
 
-All three principles are realized through a **formal operating system abstraction**: agent beliefs are typed as intervals, actions are typed as enumerations with formal consistency rules, and every decision is logged as a trace that can be replayed and verified against the formal specification. This gives ColdOS the potential to become a **fully auditable, machine‑checkable platform for agent deployment**.
+All three principles are realized through a **formal operating system abstraction**: agent beliefs are typed as intervals, actions are typed as enumerations with formal consistency rules, and every decision is logged as a trace that can be replayed and verified against the formal specification. This is designed to turn ColdOS into a **fully auditable, machine‑checkable platform for agent deployment**. The current prototype implements the core consistency checks; **full formal verification remains future work**.
 
 ---
 
