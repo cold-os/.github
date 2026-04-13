@@ -6,7 +6,7 @@
 
 <div align="center">
     
-# ColdOS: A Cold Existence Consistency Safety Kernel<br>(Concept Prototype)
+# ColdOS: An Agent-Oriented Formal Operating System<br>(Concept Prototype)
 
 </div>
 
@@ -26,7 +26,7 @@
 > **⚠️ Experimental Proof of Concept**  
 > ColdOS is an academic exploration project initiated independently by an undergraduate student and still in its early prototype stage. It takes the **ColdReasoner** mathematical reasoning engine as its absolute core, integrating Cold Existence philosophy, deductive alignment rules, and safety execution components to provide agents with auditable, quantifiable risk decision support. All components are currently proof‑of‑concept (PoC) or pre‑alpha versions, **not suitable for any production environment**.
 
-**ColdOS** is not a traditional operating system, but a **conceptual prototype of an open‑source technology system** centered around the **ColdReasoner** mathematical reasoning engine. ColdReasoner is responsible for the agent’s belief updates and risk quantification – it is the mathematical kernel. Other components (CAGE, CEAL, ColdMirror, ColdPivot) are pluggable peripheral devices that provide inputs to the kernel and execute its decisions. The entire system starts from Cold Existence philosophy and lands in engineering practice.
+**ColdOS** is not a traditional operating system. Instead, it is a conceptual prototype of an **agent‑oriented formal operating system** – a new kind of OS that manages not hardware resources but the **beliefs**, **actions**, and **consistency** of autonomous agents. Its core is the **ColdReasoner** formal verification engine, which enforces auditable, quantifiable constraints on agent behavior through a three‑layer consistency check (belief legality, action self‑consistency, action‑belief alignment). All other components (CAGE, CEAL, ColdMirror, ColdPivot) are pluggable peripherals that provide inputs to ColdReasoner and execute its decisions.
 
 ---
 
@@ -59,7 +59,7 @@ flowchart LR
     哲学根基 --> 安全基础设施 --> 推理与决策核心 --> 执行框架 --> 应用层
 ```
 
-> ColdReasoner is the core of the system; all other components provide inputs, execution, and auditing around it. Each layer will be loosely coupled through open‑source licenses, API conventions, and audit log interfaces in the future, and can be used independently or deployed in combination.
+> ColdReasoner is the formal kernel of this agent‑oriented operating system. All other components are pluggable devices that feed into its formal consistency checks. The system’s semantics – belief intervals, action legality, and mapping functions – are defined formally, making the entire OS a **mathematically verifiable runtime environment for agents**.
 
 ---
 
@@ -89,6 +89,8 @@ ColdOS follows three core principles:
 - **Bayesian auditable**: belief updates and risk assessments are all based on probabilistic models; all priors, likelihoods, and posteriors are traceable.
 
 All principles are ultimately reflected mathematically through ColdReasoner’s reasoning model. The core value of ColdOS is not in specific access control or rule filtering, but in providing an **auditable, quantifiable mathematical reasoning kernel**. As long as ColdReasoner is running, the verifiable safety of the system persists even if any other component is replaced.
+
+All three principles are realized through a **formal operating system abstraction**: agent beliefs are typed as intervals, actions are typed as enumerations with formal consistency rules, and every decision is logged as a trace that can be replayed and verified against the formal specification. This turns ColdOS into a **fully auditable, machine‑checkable platform for agent deployment**.
 
 ---
 
@@ -179,6 +181,6 @@ It is blue all over the mountains
 ```
 
 ---
-
-**Final note: ColdOS is an immature academic prototype that is slowly evolving.**  
-If you are interested in safe agents, Bayesian alignment, deductive rules, or related directions, you are welcome to follow the author with a research or collaborative attitude.
+ 
+**Final note: ColdOS is an early‑stage conceptual prototype of an agent‑oriented formal operating system.**  
+It is not yet ready for production, but its formal foundations deserve further exploration. If you are interested in formal methods for agent safety, verifiable alignment, or the intersection of logic and autonomous systems, you are welcome to follow the author with a research or collaborative attitude.
