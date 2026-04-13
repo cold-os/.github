@@ -90,7 +90,7 @@ ColdOS follows three core principles:
 
 All principles are ultimately reflected mathematically through ColdReasoner’s reasoning model. The core value of ColdOS is not in specific access control or rule filtering, but in providing an **auditable, quantifiable mathematical reasoning kernel**. As long as ColdReasoner is running, the verifiable safety of the system persists even if any other component is replaced.
 
-All three principles are realized through a **formal operating system abstraction**: agent beliefs are typed as intervals, actions are typed as enumerations with formal consistency rules, and every decision is logged as a trace that can be replayed and verified against the formal specification. This turns ColdOS into a **fully auditable, machine‑checkable platform for agent deployment**.
+All three principles are realized through a **formal operating system abstraction**: agent beliefs are typed as intervals, actions are typed as enumerations with formal consistency rules, and every decision is logged as a trace that can be replayed and verified against the formal specification. This gives ColdOS the potential to become a **fully auditable, machine‑checkable platform for agent deployment**.
 
 ---
 
