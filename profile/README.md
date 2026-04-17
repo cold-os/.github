@@ -17,7 +17,6 @@
 [![figshare](https://img.shields.io/badge/figshare-31696846-blueviolet.svg?logo=figshare&logoColor=white)](https://doi.org/10.6084/m9.figshare.31696846)
 [![DOI](https://img.shields.io/badge/DOI-10.6084/m9.figshare.31696846-blueviolet.svg)](https://doi.org/10.6084/m9.figshare.31696846)
 [![Python](https://img.shields.io/badge/Python-blue.svg)](https://www.python.org/)
-[![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL%203.0-purple.svg)](https://www.gnu.org/licenses/agpl-3.0.html)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 ![Status](https://img.shields.io/badge/Status-Pre--Alpha--Prototype-orange)
 
@@ -122,7 +121,7 @@ Please contact the author via Issues or Discussions in each repository. **All co
 
 ## 📄 License
 
-Except for the cold‑reasoner repository, which adopts **AGPL 3.0**, all code repositories of ColdOS are licensed under **Apache 2.0**. AGPL is intended to protect the open‑source ecosystem of the core reasoning engine. The core design documents and preprint papers retain the author’s right of authorship, and academic citation is permitted and welcomed.
+All code repositories of ColdOS are licensed under **Apache 2.0**. The core design documents and preprint papers retain the author’s right of authorship, and academic citation is permitted and welcomed.
 
 ---
 
