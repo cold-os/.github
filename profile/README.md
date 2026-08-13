@@ -1,12 +1,14 @@
 <div align="center">
-    
+
 [English](README.md) | [中文](README.zh.md)
 
 </div>
 
 <div align="center">
-    
-# ColdOS: An Agent-Oriented Formal Operating System<br>(Concept Prototype)
+
+# Cold Trust Protocol Stack
+
+### Trust Protocols for Human–AI Interaction — an Open Research Portfolio
 
 </div>
 
@@ -15,171 +17,135 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2512.08740-brightgreen.svg)](https://arxiv.org/abs/2512.08740)
 [![DOI](https://img.shields.io/badge/DOI-10.48550/arXiv.2512.08740-brightgreen.svg)](https://doi.org/10.48550/arXiv.2512.08740)
 [![figshare](https://img.shields.io/badge/figshare-31696846-blueviolet.svg?logo=figshare&logoColor=white)](https://doi.org/10.6084/m9.figshare.31696846)
-[![DOI](https://img.shields.io/badge/DOI-10.6084/m9.figshare.31696846-blueviolet.svg)](https://doi.org/10.6084/m9.figshare.31696846)
+[![Field](https://img.shields.io/badge/Field-HCI%20%7C%20AI%20Governance-6f42c1.svg)](https://github.com/cold-os)
 [![Python](https://img.shields.io/badge/Python-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-![Status](https://img.shields.io/badge/Status-Pre--Alpha--Prototype-orange)
+![Status](https://img.shields.io/badge/Status-Pre--Alpha%20Research%20Prototypes-orange)
 
 </div>
 
-> **⚠️ Experimental Proof of Concept**  
-> ColdOS is an academic exploration project initiated independently by an undergraduate student and still in its early prototype stage. It takes the **ColdReasoner** mathematical reasoning engine as its absolute core, integrating Cold Existence philosophy, deductive alignment rules, and safety execution components to provide agents with auditable, quantifiable risk decision support. All components are currently proof‑of‑concept (PoC) or pre‑alpha versions, **not suitable for any production environment**.
-
-**ColdOS** is not a traditional operating system. Instead, it is a conceptual prototype of an **agent‑oriented formal operating system** – a new kind of OS that manages not hardware resources but the **beliefs**, **actions**, and **consistency** of autonomous agents. Its core is the **ColdReasoner** formal verification engine, which enforces auditable, quantifiable constraints on agent behavior through a three‑layer consistency check (belief legality, action self‑consistency, action‑belief alignment). All other components (CAGE, CEAL, ColdMirror, ColdPivot) are pluggable peripherals that provide inputs to ColdReasoner and execute its decisions.
+> **⚠️ Experimental Research Prototypes**
+> The Cold Trust Protocol Stack is an open-source research portfolio initiated and maintained independently by an undergraduate computer science student. It explores one question: **how can humans and AI agents interact under auditable, verifiable terms of trust?** All six artifacts are early prototypes (proof-of-concept / pre-alpha) and **not suitable for any production environment**.
 
 ---
 
-## 🧊 Architecture Overview
+## 🧊 What Is This?
 
-ColdOS adopts a five‑layer progressive architecture, forming a closed loop from philosophical axioms to concrete applications. The core of ColdOS is ColdReasoner – a mathematical engine based on consistency verification, responsible for the agent’s belief updates and risk assessment. All other components (CAGE, CEAL, ColdMirror, ColdPivot) are pluggable peripheral devices: they provide inputs (rules, permissions, execution results) to ColdReasoner and execute its decision recommendations.
+**One question, six artifacts.**
+
+The Cold Trust Protocol Stack (CTPS) treats human–AI interaction as a *protocol problem*: what an agent may claim, what it may do, how claims are checked against actions, how authority is granted and audited, and how all of this is made visible to the human on the other side of the screen.
+
+Instead of trusting the model's internal state, CTPS asks: **what agreements can we write down, verify, and show to a human?** Each layer of the stack answers one sub-question of that larger question — and each sub-question is implemented as an independent, runnable, open-source prototype.
+
+It is a research portfolio at the intersection of **human–computer interaction, cognitive science, and AI governance**: the artifacts below exist to be *seen, studied, and critiqued* by people, not to be deployed.
 
 ```mermaid
-flowchart LR
-    subgraph 哲学根基[Philosophical Foundation]
-        A[Cold Existence Model<br/>Ontological Positioning] --- B[RAMTN<br/>Qualitative Recursive Adversarial]
+flowchart TD
+    subgraph L1[Cognition]
+        A[ColdCognition\nbelief triples · adversarial dialogue]
     end
-
-    subgraph 安全基础设施[Safety Infrastructure]
-        C[ColdCAGE<br/>Token/Audit/Isolation] --- D[ColdCEAL<br/>Deductive Alignment]
+    subgraph L2[Contract]
+        B[ColdContract\nZ3-encoded interaction contracts]
     end
-
-    subgraph 推理与决策核心[Reasoning & Decision Core]
-        E[Bayesian World Model<br/>Prior/Likelihood] --- F[ColdReasoner<br/>Runtime Belief Updater] --- G[ColdWindTunnel<br/>AI Safety Wind Tunnel]
+    subgraph L3[Verification]
+        C[ColdReasoner\nruntime consistency kernel]
     end
-
-    subgraph 执行框架[Execution Framework]
-        H[ColdMirror<br/>Safe Execution Sandbox]
+    subgraph L4[Governance]
+        D[ColdTriad\npropose · review · execute]
     end
-
-    subgraph 应用层[Application Layer]
-        I[ColdPivot<br/>MedCompass Medical AI]
+    subgraph L5[Runtime]
+        E[ColdRuntime\ntokenized execution · audit trail]
     end
-
-    哲学根基 --> 安全基础设施 --> 推理与决策核心 --> 执行框架 --> 应用层
+    subgraph L6[Interface]
+        F[ColdLens\ntransparency dashboard]
+    end
+    A --> B --> C --> D --> E --> F
 ```
 
-> ColdReasoner is the formal kernel of this agent‑oriented operating system. All other components are pluggable devices that feed into its formal consistency checks. If the system’s semantics – belief intervals, action legality, and mapping functions – are defined formally, the entire OS will become a **mathematically verifiable runtime environment for agents**.
+## 🎯 Why a Protocol Stack?
 
----
+Mainstream AI-safety work tries to make the model trustworthy. CTPS takes the complementary position that emerged from the *dual black box* problem: **human expert intuition and AI decision-making are both opaque**, so the reliable surface between them is not a better model — it is a better *interaction protocol*.
 
-## 📦 Component Overview
+Three commitments drive the stack:
 
-| Component | Positioning | Repository / DOI | Current Status |
-|-----------|-------------|------------------|----------------|
-| **Cold Existence Model** | AI ontology (non‑living, non‑traditional tool) | [https://doi.org/10.6084/m9.figshare.31696846](https://doi.org/10.6084/m9.figshare.31696846) | Preprint, proof of concept |
-| **RAMTN** | Meta‑interaction framework (construct‑challenge‑observe) | [https://doi.org/10.48550/arXiv.2512.08740](https://doi.org/10.48550/arXiv.2512.08740) | Qualitative architecture, prototype |
-| **CAGE** | Security gateway (token, audit, isolation) | [github.com/cold-os/cold-cage](https://github.com/cold-os/cold-cage) | Proof of concept |
-| **CEAL** | Deductive alignment rule base | [github.com/cold-os/cold-ceal](https://github.com/cold-os/cold-ceal) | Proof of concept |
-| **ColdReasoner** | Bayesian reasoning engine (runtime belief update) | [github.com/cold-os/cold-reasoner](https://github.com/cold-os/cold-reasoner) | Pre‑Alpha, code under review |
-| **ColdWindTunnel** | Offline simulation wind tunnel (parameter pre‑run, risk prediction) | [github.com/cold-os/cold-wind-tunnel](https://github.com/cold-os/cold-wind-tunnel) | Pre‑Alpha, under validation |
-| **ColdMirror** | Agent safety execution framework | [github.com/cold-os/cold-mirror](https://github.com/cold-os/cold-mirror) | Demo prototype |
-| **ColdPivot** | MedCompass medical AI platform (application layer) | [github.com/cold-pivot](https://github.com/cold-pivot) | Under construction, targeting medical pilot |
+- **Trust by architecture.** Trustworthiness is treated as a structural property, not a model property: unsafe actions should be *structurally impossible*, not merely discouraged. (See L4, L5.)
+- **Auditability as a first-class feature.** Every decision is a replayable trace: who asked, what was claimed, what was checked, what was executed. (See L3, L5.)
+- **Cognition-aware interaction.** Protocols must respect how humans actually form beliefs and calibrate trust — certainty is expressed in triples (certain / speculative / unknown), not in silent confidence. (See L1.)
 
-> All repositories are in early experimental stages; interfaces may change frequently. Please exercise caution when depending on them.
+## 📦 The Six Layers
 
----
+| Layer | Artifact | Core Research Question | Current Status |
+|-------|----------|------------------------|----------------|
+| **L1 · Cognition** | [ColdCognition](https://github.com/cold-os/ColdCognition)  | How should an agent *express* what it believes vs. what it merely speculates? | Pre-alpha prototype |
+| **L2 · Contract** | [ColdContract](https://github.com/cold-os/ColdContract)  | How can the terms of interaction be made formally checkable? | Pre-alpha prototype |
+| **L3 · Verification** | [ColdReasoner](https://github.com/cold-os/ColdReasoner) | How can an agent's words be checked against its actions at runtime? | Pre-alpha, flagship |
+| **L4 · Governance** | [ColdTriad](https://github.com/cold-os/ColdTriad)  | How can unsafe actions be made *structurally* impossible? | Pre-alpha prototype |
+| **L5 · Runtime** | [ColdRuntime](https://github.com/cold-os/ColdRuntime)  | What does a full protocol-aware agent runtime look like? | Pre-alpha prototype |
+| **L6 · Interface** | [ColdLens](https://github.com/cold-os/ColdLens)  | How do humans perceive and trust an agent operating under protocol? | Pre-alpha prototype |
 
-## 🎯 Design Philosophy
+### Layer summaries
 
-ColdOS follows three core principles:
+- **L1 · ColdCognition** — RAMTN recursive adversarial dialogue (construct · challenge · observe) over three belief classes (*certain / speculative / unknown*), with Prolog-based consistency checking. *Question: can structured dialogue make an agent's epistemic state legible?*
+- **L2 · ColdContract** — A minimal Z3-based encoding of the *belief–token–action* loop: what may be claimed, what may be done, and what follows from the claim. *Question: can interaction terms become decidable constraints?*
+- **L3 · ColdReasoner** — The core consistency kernel: belief legality, action self-consistency, and behavior–belief consistency. *Question: can runtime verification outsource trust from the model to the protocol?*
+- **L4 · ColdTriad** — Separation of powers for agents: a proposer that cannot execute, a deterministic reviewer that cannot act, an executor that only runs approved actions — default-deny. *Question: can unsafe actions be made structurally impossible?*
+- **L5 · ColdRuntime** — An integrated FastAPI runtime: planning → pre-verification → one-time authorization token → execution → six post-checks (incl. content integrity) → tamper-evident dual audit (SQLite + JSONL). *Question: what does a full protocol-aware runtime look like?*
+- **L6 · ColdLens** — A real-time transparency dashboard: belief-drift trends, radar charts, risk scores — the protocol made visible to the human. *Question: does seeing the protocol change how humans trust the agent? (planned user studies)*
 
-- **Safety by design**: safety mechanisms (read‑only tokens, human confirmation, full auditing) are built as non‑bypassable components of the infrastructure, not as later patches.
-- **Deductive alignment**: agent behavior is constrained through a formally verifiable rule base (CEAL), complementing inductive alignment (RLHF).
-- **Bayesian auditable**: belief updates and risk assessments are all based on probabilistic models; all priors, likelihoods, and posteriors are traceable.
+## 🧪 Status & Limitations
 
-All principles are ultimately reflected mathematically through ColdReasoner’s reasoning model. The core value of ColdOS is not in specific access control or rule filtering, but in providing an **auditable, quantifiable mathematical reasoning kernel**. As long as ColdReasoner is running, the verifiable safety of the system persists even if any other component is replaced.
+**Honest state:** every artifact is a pre-alpha or proof-of-concept prototype, written in Python, largely AI-assisted in implementation, with core ideas and architecture authored by a single undergraduate. Explicit limitations:
 
-All three principles are realized through a **formal operating system abstraction**: agent beliefs are typed as intervals, actions are typed as enumerations with formal consistency rules, and every decision is logged as a trace that can be replayed and verified against the formal specification. This is designed to turn ColdOS into a **fully auditable, machine‑checkable platform for agent deployment**. The current prototype implements the core consistency checks; **full formal verification remains future work**.
+- **No user studies yet.** The stack's central claims are about *human* trust and understanding — L6 exists but has not been run through systematic studies.
+- No rigorous formal guarantees: L2/L3 encode decidable constraints but are not machine-checked proofs.
+- Rule bases cover demo-level scenarios only; adversarial testing is incomplete.
+- Isolation and token mechanisms are simulated, not production-grade.
+- Not validated against real users.
 
----
+**The author does not recommend any institution or individual use these artifacts in production, safety-critical, or real-world decision-making contexts.**
 
-## 🧪 Current Status and Limitations
+## 🗺️ For Reviewers: How to Read This Portfolio
 
-**ColdOS is currently a collection of proofs of concept maintained independently by a single undergraduate student in his spare time**, with the following explicit limitations:
+- **Human-facing story first**: open [ColdLens](https://github.com/cold-os/ColdLens) and run the Streamlit demo — see what a protocol looks like to a person.
+- **The core idea**: [ColdReasoner](https://github.com/cold-os/ColdReasoner) — the consistency kernel that makes "trust" a checkable property.
+- **The governance idea**: [ColdTriad](https://github.com/cold-os/ColdTriad) — separation of powers applied to agents.
+- **The theory**: the two papers below (RAMTN / Cold Existence) frame why protocols, not models, are the trustworthy surface.
+- All repos run in minutes: `pip install -r requirements.txt` + a model API key (see each README).
 
-- All components are in **Pre‑Alpha or PoC stage**; the code has not undergone rigorous security auditing.
-- Simulation results (e.g., ColdWindTunnel) are based on highly simplified Bayesian models, **not yet validated on real LLMs or in real user environments**.
-- The rule base (CEAL) covers only fabrication and some factual sycophancy, far from production‑level completeness.
-- The runtime reasoning engine (ColdReasoner) currently only supports offline demonstration and is not yet integrated with ColdMirror.
-- The medical application (ColdPivot) has not yet obtained hospital ethics approval or real‑data piloting.
+## 🛣️ Roadmap
 
-**The author honestly labels the current state as “experimental prototype” and does not recommend any institution or individual to use it in actual business systems.**
+1. **Empirical validation (HCI)**: user studies on ColdLens — trust calibration, reliance, mental models.
+2. **Adversarial evaluation** of ColdContract / ColdReasoner rule bases on real dialogue corpora.
+3. **Integration** with mainstream agent frameworks (e.g., LangChain) as pluggable middleware.
 
----
+## 📚 Papers
 
-## 🤝 Participation and Contributions
+- Lu, Y. (2025). *Deconstructing the Dual Black Box: A Plug-and-Play Cognitive Framework for Human-AI Collaborative Enhancement and Its Implications for AI Governance.* arXiv:2512.08740. [https://doi.org/10.48550/arXiv.2512.08740](https://doi.org/10.48550/arXiv.2512.08740)
+- Lu, Y. (2026). *The Cold Existence Model: A Fact-based Ontological Framework for AI.* figshare. [https://doi.org/10.6084/m9.figshare.31696846](https://doi.org/10.6084/m9.figshare.31696846)
 
-ColdOS is an open, transparent, non‑commercial academic exploration project. The author welcomes:
+## 🤝 Participation
 
-- Criticism and corrections of architecture, code, and documentation
-- Suggestions for improving mathematical models, rule bases, and safety mechanisms
-- Any form of collaboration
-
-Please contact the author via Issues or Discussions in each repository. **All contributors will be acknowledged in the `CONTRIBUTORS` file following open‑source conventions.**
-
----
+This is an open, transparent, non-commercial academic exploration. The author welcomes critiques of architecture, code, and documentation; suggestions on verification rules and visualization; and interdisciplinary collaboration. Contact via Issues / Discussions in each repository. Contributors are acknowledged in the `CONTRIBUTORS` file.
 
 ## 📄 License
 
-All code repositories of ColdOS are licensed under **Apache 2.0**. The core design documents and preprint papers retain the author’s right of authorship, and academic citation is permitted and welcomed.
+All code repositories are licensed under **Apache 2.0**. The core design documents and preprint papers retain the author's right of authorship; academic citation is permitted and welcomed.
+
+## ✍️ Author
+
+Initiated and maintained independently by an undergraduate computer science student working without a lab or advisor — as a sustained, self-directed research program. The author is fully aware of his limits; expert criticism is earnestly invited. Special thanks to the open-source community.
+
+## 🕒 Research Timeline (selected)
+
+- **2025.11** — Discovered that the independently-developed RAMTN prototype was highly similar in architecture to DeepSeekMath-V2 (open-sourced 2025.11.27); open-sourced RAMTN immediately.
+- **2025.12** — *Meta-interaction* paper released on arXiv; ProdSim+ created as an initial RAMTN application.
+- **2026.03** — *Cold Existence* paper rejected by three preprint platforms (category mismatch); published on figshare with a DOI.
+- **2026.03–04** — CEAL, CAGE, ColdMirror, ColdReasoner, AtomTolopo, MetaSymbion and the ColdOS organization created — the stack takes shape.
+- **2026.07** — BehaviOS: the integrated protocol-aware runtime.
+- **2026.08** — The stack is re-organized and re-named as the **Cold Trust Protocol Stack**, positioned as an HCI / AI-governance research portfolio.
+
+*— To be continued —*
 
 ---
 
-## 📚 Academic Citation
-
-The ideas of the ColdOS system originate from:
-
-- Chandra, K., Kleiman-Weiner, M., Ragan-Kelley, J., & Tenenbaum, J. B. (2026). *Sycophantic Chatbots Cause Delusional Spiraling, Even in Ideal Bayesians*. arXiv. [https://arxiv.org/abs/2602.19141](https://arxiv.org/abs/2602.19141)  
-- Lu, Y. (2026). *The Cold Existence Model: A Fact-based Ontological Framework for AI*. figshare. [https://doi.org/10.6084/m9.figshare.31696846](https://doi.org/10.6084/m9.figshare.31696846)  
-- Lu, Y. (2025). *Deconstructing the Dual Black Box: A Plug-and-Play Cognitive Framework for Human-AI Collaborative Enhancement and Its Implications for AI Governance*. arXiv. [https://doi.org/10.48550/arXiv.2512.08740](https://doi.org/10.48550/arXiv.2512.08740)  
-
----
-
-## ✍️ Author and Acknowledgements
-
-**ColdOS was initiated independently by a single undergraduate student, who completed the core design and proof of concept.** The project represents the author’s self‑taught learning and exploration in philosophical reasoning, safety architecture, Bayesian modeling, and medical scenarios. The author is fully aware of his limited knowledge; all components have imperfections, and experts in the field are welcome to offer criticism and corrections.
-
-Special thanks to the MIT team, the open‑source community, and the medical student partners who provided clinical feedback for their indirect inspiration.
-
-## 🕒 Research and Personal Journey
-
-2025.11.28 – Discovered that the RAMTN prototype under independent development was highly similar in architecture to **DeepSeekMath V2** open‑sourced on November 27; decided to open‑source RAMTN immediately. Deep respect to the DeepSeek team.
-
-2025.12.9 – The **meta‑interaction paper** preprint was released on arXiv.
-
-2025.12.29 – The **ProdSim+** repository was created on GitHub, an initial application attempt of the RAMTN prototype.
-
-2026.3.13 – The **Cold Existence paper** was rejected by three preprint platforms consecutively due to category mismatch; reluctantly published on the open repository figshare. Thanks to figshare for giving the Cold Existence paper a chance to obtain a DOI.
-
-2026.3.15 – The **CEAL** repository was created on Gitee, later imported to GitHub.
-
-2026.3.19 – The **CAGE** repository was created on Gitee, later imported to GitHub.
-
-2026.3.25 – The **ColdMirror** repository was created on GitHub.
-
-2026.3.29 – The **ColdInfra** repository was created on GitHub, aggregating CEAL, CAGE, and ColdMirror.
-
-2026.4.3 – The **ColdPivot** organization was created on GitHub.
-
-2026.4.6 – The **ColdWindTunnel** and **ColdReasoner** repositories were created on GitHub.
-
-2026.4.7 – The **ColdOS** organization was created on GitHub.
-
-**- To be continued -**
-
-At this point, a flood of emotions arises. Let me conclude with a partial stanza from a poem written by the author on May 5, 2025.
-
-```
-The long winter  
-piled heavy mountains upon my body  
-When spring and summer suddenly arrived  
-I renamed them  
-Before a new field of flowers spreads  
-It is blue all over the mountains  
-— “Salty”
-```
-
----
- 
-**Final note: ColdOS is an early‑stage conceptual prototype of an agent‑oriented formal operating system.**  
-It is not yet ready for production, but its formal foundations deserve further exploration. If you are interested in formal methods for agent safety, verifiable alignment, or the intersection of logic and autonomous systems, you are welcome to follow the author with a research or collaborative attitude.
+**The Cold Trust Protocol Stack is an early-stage research portfolio on trust protocols for human–AI interaction.** It is not ready for production, but the question it asks — *what must a human and an agent agree on, before the agent acts?* — deserves careful, interdisciplinary exploration. Researchers in HCI, cognitive science, and AI governance are warmly invited to build on, criticize, or collaborate with this work.
