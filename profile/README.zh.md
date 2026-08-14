@@ -8,7 +8,7 @@
 
 # Cold Trust Protocol Stack
 
-### 人机交互的信任协议 —— 一个开源研究作品集
+### 人机交互的信任协议 —— 一个计算社会科学研究作品集
 
 </div>
 
@@ -17,7 +17,7 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2512.08740-brightgreen.svg)](https://arxiv.org/abs/2512.08740)
 [![DOI](https://img.shields.io/badge/DOI-10.48550/arXiv.2512.08740-brightgreen.svg)](https://doi.org/10.48550/arXiv.2512.08740)
 [![figshare](https://img.shields.io/badge/figshare-31696846-blueviolet.svg?logo=figshare&logoColor=white)](https://doi.org/10.6084/m9.figshare.31696846)
-[![Field](https://img.shields.io/badge/Field-HCI%20%7C%20AI%20Governance-6f42c1.svg)](https://github.com/cold-os)
+[![Field](https://img.shields.io/badge/Field-CSS%20%7C%20HCI%20%7C%20AI%20Governance-6f42c1.svg)](https://github.com/cold-os)
 [![Python](https://img.shields.io/badge/Python-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 ![Status](https://img.shields.io/badge/Status-Pre--Alpha%20Research%20Prototypes-orange)
