@@ -24,7 +24,7 @@
 
 </div>
 
-> **⚠️ Experimental Research Prototypes**
+> **⚠️ Experimental Research Prototypes**  
 > The Cold Trust Protocol Stack (CTPS) is an open-source research portfolio, initiated and maintained independently by an undergraduate computer science student, positioned at the intersection of **computational social science (CSS)** and **human–computer interaction (HCI)**. It explores one question: **how can humans and AI agents interact under auditable, verifiable terms of trust?** All six artifacts are early prototypes (proof-of-concept / pre-alpha), honestly labeled, and **not suitable for any production environment**.
 
 ---
