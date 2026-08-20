@@ -89,12 +89,14 @@ flowchart TD
 
 **诚实声明：** 每件工件都是 pre-alpha 或概念验证原型，以 Python 编写，实现中大量借助 AI 辅助，核心思想与架构由一位本科生独立完成。明确的局限：
 
-- **尚无任何实证分析。** 这个栈的核心主张都关乎*人类*的信任与理解——既没有对交互轨迹的计算分析（CSS），也没有系统的用户研究（HCI）。L6 已经存在，但尚未被研究。
 - 无严格的形式化保证：L2/L3 编码了可判定约束，但不是机器可检验的证明。
 - 规则库仅覆盖演示级场景；对抗性测试尚不完整。
 - 隔离与令牌机制是模拟的，未达生产级。
 
 **作者不建议任何机构或个人将这些工件用于生产、安全关键或真实世界决策场景。**
+
+**一项试点研究已完成，更多尚待开展。** 叙事一致性构念的首个实证验证见[cold-narrative-empirics](https://github.com/cold-os/cold-narrative-empirics)
+（人工标注一致性 κ = 0.765；内核假设带来 +20 个百分点平衡准确率提升；n = 20，合成数据）。目前仅建立了判别效度；预测效度、真实交互轨迹分析与用户研究仍属未来工作。
 
 ## 🗺️ 给评审者：如何读这个作品集
 
@@ -105,7 +107,8 @@ flowchart TD
 
 ## 🛣️ 路线图
 
-1. **计算实证研究（CSS）**：在公开交互轨迹与仪表盘日志上分析人机信任——拒绝率、信念偏差分布、依赖模式。
+1. **实证验证，持续推进**：在已完成的 SSD 试点（[cold-narrative-empirics](https://github.com/cold-os/cold-narrative-empirics)）
+   基础上，扩展到预测效度（内核假设预测）与真实交互轨迹（WildChat）——拒绝率、信念偏差分布、依赖模式。
 2. **用户研究（HCI）**：在 ColdLens 上开展信任校准与心智模型研究。
 3. 在真实对话语料上对 ColdContract / ColdReasoner 规则库做对抗性评估。
 4. 与主流智能体框架（如 LangChain）以可插拔中间件形式集成。
@@ -114,6 +117,7 @@ flowchart TD
 
 - Lu, Y. (2025). *Deconstructing the Dual Black Box: A Plug-and-Play Cognitive Framework for Human-AI Collaborative Enhancement and Its Implications for AI Governance.* arXiv:2512.08740. [https://doi.org/10.48550/arXiv.2512.08740](https://doi.org/10.48550/arXiv.2512.08740)
 - Lu, Y. (2026). *The Cold Existence Model: A Fact-based Ontological Framework for AI.* figshare. [https://doi.org/10.6084/m9.figshare.31696846](https://doi.org/10.6084/m9.figshare.31696846)
+- Lu, Y. (2026). *叙事一致性：基于合成苏格拉底辩论的实证验证.* 开源研究仓库（含代码、标注与分析）. [https://github.com/cold-os/cold-narrative-empirics](https://github.com/cold-os/cold-narrative-empirics)
 
 ## 🤝 参与
 
@@ -135,6 +139,7 @@ flowchart TD
 - **2026.03–04** —— 创建 CEAL、CAGE、ColdMirror、ColdReasoner、AtomTolopo、MetaSymbion 与 ColdOS 组织——协议栈成形。
 - **2026.07** —— BehaviOS：集成的协议感知运行时。
 - **2026.08** —— 协议栈重组并更名为 **Cold Trust Protocol Stack**，定位为以 CSS 为锚的 HCI 研究作品集。
+- **2026.08** — 叙事一致性构念的首个实证验证发布：人工标注一致性 κ = 0.765，内核假设增益 +20 个百分点（cold-narrative-empirics）。
 
 *— 未完待续 —*
 
