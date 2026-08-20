@@ -89,12 +89,13 @@ From a CSS perspective, these commitments make trust *measurable*: rejection rat
 
 **Honest state:** every artifact is a pre-alpha or proof-of-concept prototype, written in Python, largely AI-assisted in implementation, with core ideas and architecture authored by a single undergraduate. Explicit limitations:
 
-- **No empirical analysis yet.** The stack's central claims are about *human* trust and understanding — neither computational analysis of interaction traces (CSS) nor systematic user studies (HCI) has been conducted. L6 exists but has not been studied.
 - No rigorous formal guarantees: L2/L3 encode decidable constraints but are not machine-checked proofs.
 - Rule bases cover demo-level scenarios only; adversarial testing is incomplete.
 - Isolation and token mechanisms are simulated, not production-grade.
 
 **The author does not recommend any institution or individual use these artifacts in production, safety-critical, or real-world decision-making contexts.**
+
+**One pilot study completed, more needed.** A first empirical validation of the narrative-consistency construct is available at [cold-narrative-empirics](https://github.com/cold-os/cold-narrative-empirics) (human rater agreement κ = 0.765; core-hypothesis gain +20pp balanced accuracy, n = 20, synthetic data). It establishes discriminative validity only; predictive validity, real-interaction traces, and user studies remain future work.
 
 ## 🗺️ For Reviewers: How to Read This Portfolio
 
@@ -105,7 +106,7 @@ From a CSS perspective, these commitments make trust *measurable*: rejection rat
 
 ## 🛣️ Roadmap
 
-1. **Computational empirical study (CSS)**: analyze human–AI trust on public interaction traces and dashboard logs — rejection rates, belief-deviation distributions, reliance patterns.
+1. **Empirical validation, continued**: extend the completed SSD pilot ([cold-narrative-empirics](https://github.com/cold-os/cold-narrative-empirics)) to predictive validity (core-hypothesis forecasting) and to real interaction traces (WildChat) — rejection rates, belief-deviation distributions, reliance patterns.
 2. **User studies (HCI)**: trust calibration and mental-model studies on ColdLens.
 3. **Adversarial evaluation** of ColdContract / ColdReasoner rule bases on real dialogue corpora.
 4. **Integration** with mainstream agent frameworks (e.g., LangChain) as pluggable middleware.
@@ -114,6 +115,7 @@ From a CSS perspective, these commitments make trust *measurable*: rejection rat
 
 - Lu, Y. (2025). *Deconstructing the Dual Black Box: A Plug-and-Play Cognitive Framework for Human-AI Collaborative Enhancement and Its Implications for AI Governance.* arXiv:2512.08740. [https://doi.org/10.48550/arXiv.2512.08740](https://doi.org/10.48550/arXiv.2512.08740)
 - Lu, Y. (2026). *The Cold Existence Model: A Fact-based Ontological Framework for AI.* figshare. [https://doi.org/10.6084/m9.figshare.31696846](https://doi.org/10.6084/m9.figshare.31696846)
+- Lu, Y. (2026). *Narrative Consistency: An Empirical Validation on Synthetic Socratic Debates.* Open research repository with code, annotation, and analysis. [https://github.com/cold-os/cold-narrative-empirics](https://github.com/cold-os/cold-narrative-empirics)
 
 ## 🤝 Participation
 
@@ -135,6 +137,7 @@ Initiated and maintained independently by an undergraduate computer science stud
 - **2026.03–04** — CEAL, CAGE, ColdMirror, ColdReasoner, AtomTolopo, MetaSymbion and the ColdOS organization created — the stack takes shape.
 - **2026.07** — BehaviOS: the integrated protocol-aware runtime.
 - **2026.08** — The stack is re-organized and re-named as the **Cold Trust Protocol Stack**, positioned as a CSS-anchored HCI research portfolio.
+- **2026.08** — First empirical validation of the narrative-consistency construct released: human rater agreement κ = 0.765, core-hypothesis gain +20pp (cold-narrative-empirics).
 
 *— To be continued —*
 
