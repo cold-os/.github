@@ -8,7 +8,7 @@
 
 # Cold Trust Protocol Stack
 
-### 面向人机交互的信任协议 —— 一个计算社会科学研究作品集
+### 面向人机交互的信任协议 —— 一个人机交互研究作品集
 
 </div>
 
@@ -25,13 +25,13 @@
 </div>
 
 > **⚠️ 实验性研究原型**  
-> Cold Trust Protocol Stack（CTPS）是一个开源研究作品集，由一位计算机科学本科生独立发起并维护，定位于 **计算社会科学（CSS）与人机交互（HCI）** 的交汇处。它只探索一个问题：**人与 AI 智能体，如何在可审计、可验证的信任条款下互动？** 全部六件工件均为早期原型（概念验证 / pre-alpha），已如实标注，**不适用于任何生产环境**。
+> Cold Trust Protocol Stack（CTPS）是一个开源研究作品集，由一位计算机科学本科生独立发起并维护，定位于 **计算社会科学（CSS）与人机交互（HCI）** 的交汇处。它只探索一个问题：**人与 AI 智能体，如何在可审计、可验证的信任条款下互动？** 六层协议栈及其设计演示(ColdDesign)均为早期原型（概念验证 / pre-alpha），已如实标注，**不适用于任何生产环境**。
 
 ---
 
 ## 🧊 这是什么？
 
-**一个问题，六件工件。**
+**一个问题,六层协议,一层设计理念。**
 
 CTPS 把人机交互视为一个*协议问题*：智能体可以宣称什么、可以做什么、宣称如何与行为核对、权限如何授予与审计，以及这一切如何呈现给屏幕另一端的人。
 
@@ -41,6 +41,9 @@ CTPS 把人机交互视为一个*协议问题*：智能体可以宣称什么、�
 
 ```mermaid
 flowchart TD
+    subgraph D0[理念层]
+    G[ColdDesign<br/>存在声明 · 用户侧透明界面]
+    end
     subgraph L1[认知层]
         A[ColdCognition<br/>信念三元组 · 对抗式对话]
     end
@@ -59,7 +62,7 @@ flowchart TD
     subgraph L6[界面层]
         F[ColdLens<br/>透明仪表盘]
     end
-    A --> B --> C --> D --> E --> F
+    G --> A --> B --> C --> D --> E --> F
 ```
 
 ## 🎯 为什么是协议栈？
@@ -78,12 +81,13 @@ flowchart TD
 
 | 层 | 工件 | 核心研究问题 | 当前状态 |
 |-------|----------|------------------------|----------------|
+| **L0 · 设计** | [ColdDesign](https://github.com/cold-os/ColdDesign) | 设计理念如何呈现给用户? | Pre-alpha 旗舰 |
 | **L1 · 认知** | [ColdCognition](https://github.com/cold-os/ColdCognition) | 智能体如何*表达*它相信什么，而非只是推测什么？ | Pre-alpha 原型 |
 | **L2 · 契约** | [ColdContract](https://github.com/cold-os/ColdContract) | 交互条款如何变得可形式化检验？ | Pre-alpha 原型 |
-| **L3 · 验证** | [ColdReasoner](https://github.com/cold-os/ColdReasoner) | 智能体的言行如何在运行时核对？ | Pre-alpha，旗舰 |
+| **L3 · 验证** | [ColdReasoner](https://github.com/cold-os/ColdReasoner) | 智能体的言行如何在运行时核对？ | Pre-alpha，原型 |
 | **L4 · 治理** | [ColdTriad](https://github.com/cold-os/ColdTriad) | 不安全的行为如何变得在*结构上*不可能？ | Pre-alpha 原型 |
 | **L5 · 运行时** | [ColdRuntime](https://github.com/cold-os/ColdRuntime) | 一个完整的协议感知智能体运行时长什么样？ | Pre-alpha 原型 |
-| **L6 · 界面** | [ColdLens](https://github.com/cold-os/ColdLens) | 人类如何感知并信任一个在协议下运行的智能体？ | Pre-alpha 原型 |
+| **L6 · 界面** | [ColdLens](https://github.com/cold-os/ColdLens) | 人类如何感知并信任一个在协议下运行的智能体？(用户视角见 ColdDesign) | Pre-alpha 原型 |
 
 ## 🧪 现状与局限
 
@@ -101,7 +105,7 @@ flowchart TD
 ## 🗺️ 给评审者：如何读这个作品集
 
 - **如果您来自计算社会科学**：把协议栈当作*研究对象*——一套被仪器化的交互协议，其轨迹（信念报告、验证裁决、审计日志、仪表盘交互）是规模化研究人机信任、依赖与委托的数据。
-- **如果您来自人机交互**：从 [ColdLens](https://github.com/cold-os/ColdLens)——透明界面——和它关于信任校准的研究问题开始；[ColdReasoner](https://github.com/cold-os/ColdReasoner) 是它背后的一致性内核。
+- **如果您来自人机交互/用户研究**：请从 ColdDesign 开始——这是面向用户的透明化界面，其存在声明与置信度展示体现了设计理念；而 ColdLens 则是面向研究者的仪表盘。
 - **如果您来自 AI 治理**：看协议栈如何把可见性、对齐与授权操作化进设计（L4–L6），理论框架见下方两篇论文。
 - 所有仓库都能在几分钟内跑起来：`pip install -r requirements.txt` + 一个模型 API key（见各仓库 README）。
 
@@ -109,7 +113,7 @@ flowchart TD
 
 1. **实证验证，持续推进**：在已完成的 SSD 试点（[cold-narrative-empirics](https://github.com/cold-os/cold-narrative-empirics)）
    基础上，扩展到预测效度（内核假设预测）与真实交互轨迹（WildChat）——拒绝率、信念偏差分布、依赖模式。
-2. **用户研究（HCI）**：在 ColdLens 上开展信任校准与心智模型研究。
+2. **用户研究（HCI）**：在 ColdDesign 上开展信任校准与心智模型研究,以 ColdLens 作为测量仪表盘。
 3. 在真实对话语料上对 ColdContract / ColdReasoner 规则库做对抗性评估。
 4. 与主流智能体框架（如 LangChain）以可插拔中间件形式集成。
 
@@ -140,6 +144,7 @@ flowchart TD
 - **2026.07** —— BehaviOS：集成的协议感知运行时。
 - **2026.08** —— 协议栈重组并更名为 **Cold Trust Protocol Stack**，定位为以 CSS 为锚的 HCI 研究作品集。
 - **2026.08** — 叙事一致性构念的首个实证验证发布：人工标注一致性 κ = 0.765，内核假设增益 +20 个百分点（cold-narrative-empirics）。
+- **2026.09** — ColdDesign 发布：将设计理念（冷存在）以面向用户的透明演示形式呈现；旗舰作品从 ColdReasoner 迁移至 ColdDesign。
 
 *— 未完待续 —*
 
