@@ -25,13 +25,13 @@
 </div>
 
 > **⚠️ Experimental Research Prototypes**  
-> The Cold Trust Protocol Stack (CTPS) is an open-source research portfolio, initiated and maintained independently by an undergraduate computer science student, positioned at the intersection of **computational social science (CSS)** and **human–computer interaction (HCI)**. It explores one question: **how can humans and AI agents interact under auditable, verifiable terms of trust?** All six artifacts are early prototypes (proof-of-concept / pre-alpha), honestly labeled, and **not suitable for any production environment**.
+> The Cold Trust Protocol Stack (CTPS) is an open-source research portfolio, initiated and maintained independently by an undergraduate computer science student, positioned at the intersection of **computational social science (CSS)** and **human–computer interaction (HCI)**. It explores one question: **how can humans and AI agents interact under auditable, verifiable terms of trust?** All six artifacts and the design demo (ColdDesign) are early prototypes (proof-of-concept / pre-alpha), honestly labeled, and **not suitable for any production environment**.
 
 ---
 
 ## 🧊 What Is This?
 
-**One question, six artifacts.**
+**One question, six layers, one design layer.**
 
 CTPS treats human–AI interaction as a *protocol problem*: what an agent may claim, what it may do, how claims are checked against actions, how authority is granted and audited, and how all of this is made visible to the human on the other side of the screen.
 
@@ -41,6 +41,9 @@ For **computational social science**, this portfolio plays a dual role. It is a 
 
 ```mermaid
 flowchart TD
+    subgraph D0[Design]
+    G[ColdDesign<br/>existence declaration · user-side transparent interface]
+    end
     subgraph L1[Cognition]
         A[ColdCognition<br/>belief triples · adversarial dialogue]
     end
@@ -59,7 +62,7 @@ flowchart TD
     subgraph L6[Interface]
         F[ColdLens<br/>transparency dashboard]
     end
-    A --> B --> C --> D --> E --> F
+    G --> A --> B --> C --> D --> E --> F
 ```
 
 ## 🎯 Why a Protocol Stack?
@@ -78,12 +81,13 @@ From a CSS perspective, these commitments make trust *measurable*: rejection rat
 
 | Layer | Artifact | Core Research Question | Current Status |
 |-------|----------|------------------------|----------------|
+| **L0 · Design** | [ColdDesign](https://github.com/cold-os/ColdDesign) | How can the design philosophy be presented to the users? | Pre-alpha, flag ship |
 | **L1 · Cognition** | [ColdCognition](https://github.com/cold-os/ColdCognition) | How should an agent *express* what it believes vs. what it merely speculates? | Pre-alpha prototype |
 | **L2 · Contract** | [ColdContract](https://github.com/cold-os/ColdContract) | How can the terms of interaction be made formally checkable? | Pre-alpha prototype |
-| **L3 · Verification** | [ColdReasoner](https://github.com/cold-os/ColdReasoner) | How can an agent's words be checked against its actions at runtime? | Pre-alpha, flagship |
+| **L3 · Verification** | [ColdReasoner](https://github.com/cold-os/ColdReasoner) | How can an agent's words be checked against its actions at runtime? | Pre-alpha prototype |
 | **L4 · Governance** | [ColdTriad](https://github.com/cold-os/ColdTriad) | How can unsafe actions be made *structurally* impossible? | Pre-alpha prototype |
 | **L5 · Runtime** | [ColdRuntime](https://github.com/cold-os/ColdRuntime) | What does a full protocol-aware agent runtime look like? | Pre-alpha prototype |
-| **L6 · Interface** | [ColdLens](https://github.com/cold-os/ColdLens) | How do humans perceive and trust an agent operating under protocol? | Pre-alpha prototype |
+| **L6 · Interface** | [ColdLens](https://github.com/cold-os/ColdLens) | How do humans perceive and trust an agent operating under protocol? (User perspective: ColdDesign) | Pre-alpha prototype |
 
 ## 🧪 Status & Limitations
 
@@ -100,14 +104,14 @@ From a CSS perspective, these commitments make trust *measurable*: rejection rat
 ## 🗺️ For Reviewers: How to Read This Portfolio
 
 - **If you come from computational social science**: treat the stack as a *research object* — an instrumented interaction protocol whose traces (belief reports, verification verdicts, audit logs, dashboard interactions) are data for studying human–AI trust, reliance, and delegation at scale.
-- **If you come from HCI**: start with [ColdLens](https://github.com/cold-os/ColdLens) — the transparency interface — and its research question about trust calibration; [ColdReasoner](https://github.com/cold-os/ColdReasoner) is the consistency kernel behind it.
+- **If you come from HCI / UX**: start with ColdDesign — the user-facing transparency interface — where the existence declaration and confidence display embody the design philosophy; ColdLens is the researcher-facing dashboard of the same protocol.
 - **If you come from AI governance**: see how the stack operationalizes visibility, alignment, and authorization by design (L4–L6), and the two papers below for the theoretical framing.
 - All repos run in minutes: `pip install -r requirements.txt` + a model API key (see each README).
 
 ## 🛣️ Roadmap
 
 1. **Empirical validation, continued**: extend the completed SSD pilot ([cold-narrative-empirics](https://github.com/cold-os/cold-narrative-empirics)) to predictive validity (core-hypothesis forecasting) and to real interaction traces (WildChat) — rejection rates, belief-deviation distributions, reliance patterns.
-2. **User studies (HCI)**: trust calibration and mental-model studies on ColdLens.
+2. **User studies (HCI)**: trust calibration and mental-model studies on ColdDesign, with ColdLens as the measurement dashboard.
 3. **Adversarial evaluation** of ColdContract / ColdReasoner rule bases on real dialogue corpora.
 4. **Integration** with mainstream agent frameworks (e.g., LangChain) as pluggable middleware.
 
@@ -138,6 +142,7 @@ Initiated and maintained independently by an undergraduate computer science stud
 - **2026.07** — BehaviOS: the integrated protocol-aware runtime.
 - **2026.08** — The stack is re-organized and re-named as the **Cold Trust Protocol Stack**, positioned as a CSS-anchored HCI research portfolio.
 - **2026.08** — First empirical validation of the narrative-consistency construct released: human rater agreement κ = 0.765, core-hypothesis gain +20pp (cold-narrative-empirics).
+- **2026.09** — ColdDesign released: the design philosophy (cold existence) rendered as a user-facing transparency demo; flagship moved from ColdReasoner to ColdDesign.
 
 *— To be continued —*
 
