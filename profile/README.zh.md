@@ -84,7 +84,7 @@ flowchart TD
 | **L0 · 设计** | [ColdDesign](https://github.com/cold-os/ColdDesign) | 设计理念如何呈现给用户? | Pre-alpha 旗舰 |
 | **L1 · 认知** | [ColdCognition](https://github.com/cold-os/ColdCognition) | 智能体如何*表达*它相信什么，而非只是推测什么？ | Pre-alpha 原型 |
 | **L2 · 契约** | [ColdContract](https://github.com/cold-os/ColdContract) | 交互条款如何变得可形式化检验？ | Pre-alpha 原型 |
-| **L3 · 验证** | [ColdReasoner](https://github.com/cold-os/ColdReasoner) | 智能体的言行如何在运行时核对？ | Pre-alpha，原型 |
+| **L3 · 验证** | [ColdReasoner](https://github.com/cold-os/ColdReasoner) | 智能体的言行如何在运行时核对？ | Pre-alpha 原型 |
 | **L4 · 治理** | [ColdTriad](https://github.com/cold-os/ColdTriad) | 不安全的行为如何变得在*结构上*不可能？ | Pre-alpha 原型 |
 | **L5 · 运行时** | [ColdRuntime](https://github.com/cold-os/ColdRuntime) | 一个完整的协议感知智能体运行时长什么样？ | Pre-alpha 原型 |
 | **L6 · 界面** | [ColdLens](https://github.com/cold-os/ColdLens) | 人类如何感知并信任一个在协议下运行的智能体？(用户视角见 ColdDesign) | Pre-alpha 原型 |
