@@ -81,7 +81,7 @@ From a CSS perspective, these commitments make trust *measurable*: rejection rat
 
 | Layer | Artifact | Core Research Question | Current Status |
 |-------|----------|------------------------|----------------|
-| **L0 · Design** | [ColdDesign](https://github.com/cold-os/ColdDesign) | How can the design philosophy be presented to the users? | Pre-alpha, flag ship |
+| **L0 · Design** | [ColdDesign](https://github.com/cold-os/ColdDesign) | How can the design philosophy be presented to the users? | Pre-alpha, flagship |
 | **L1 · Cognition** | [ColdCognition](https://github.com/cold-os/ColdCognition) | How should an agent *express* what it believes vs. what it merely speculates? | Pre-alpha prototype |
 | **L2 · Contract** | [ColdContract](https://github.com/cold-os/ColdContract) | How can the terms of interaction be made formally checkable? | Pre-alpha prototype |
 | **L3 · Verification** | [ColdReasoner](https://github.com/cold-os/ColdReasoner) | How can an agent's words be checked against its actions at runtime? | Pre-alpha prototype |
