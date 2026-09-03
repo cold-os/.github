@@ -8,7 +8,7 @@
 
 # Cold Trust Protocol Stack
 
-### Trust Protocols for Human–AI Interaction — a Human–Computer Interaction Research Portfolio
+### Trust Protocols for Human–AI Interaction — a Computational Social Science Research Portfolio
 
 </div>
 
